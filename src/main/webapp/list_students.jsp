@@ -12,40 +12,26 @@
     <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-<% String names[] =(String[]) request.getAttribute("studentsArr"); %>
-<ul>
-    <% for(String name: names) { %>
-    <li><%= name %></li>
-    <% } %>
-</ul>
 <h3 style="color: orangered">${ listTitle }</h3>
+
 <table border="1">
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Age</th>
         <th>Action</th>
-        <th></th>
     </tr>
+    <% String students[][] =(String[][]) request.getAttribute("studentsArr"); %>
+    <% for(String[] student: students) { %>
     <tr>
-        <td>1</td>
-        <td>John</td>
-        <td>20</td>
+        <td><%= student[0] %></td>
+        <td><%= student[1] %></td>
+        <td><%= student[2] %></td>
         <td><a href="">Edit</a></td>
     </tr>
-    <tr>
-        <td>2</td>
-        <td>Mary</td>
-        <td>21</td>
-        <td><a href="">Edit</a></td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>Peter</td>
-        <td>22</td>
-        <td><a href="">Edit</a></td>
-    </tr>
+    <% } %>
 </table>
+<br>
 <a href="/">Home</a>
 </body>
 </html>

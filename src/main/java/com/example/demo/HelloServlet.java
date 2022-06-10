@@ -22,7 +22,7 @@ public class HelloServlet extends HttpServlet {
             case "/list":
                 String listTitle= "List of registered Students";
                 request.setAttribute("listTitle", listTitle);
-                String[] students = {"John", "Jane", "Mary", "Bob"};
+                String[][] students = {{"1,","John","20"}, {"2", "Mary", "29"}, {"3", "Peter", "17"}};
                 request.setAttribute("studentsArr", students);
                 RequestDispatcher dispatcher2 = request.getRequestDispatcher("/list_students.jsp");
                 dispatcher2.forward(request, response);

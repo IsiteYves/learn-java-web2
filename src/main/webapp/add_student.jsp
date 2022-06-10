@@ -16,8 +16,10 @@
 <form action="#" method="post">
     <label for="name">Name:</label>
     <input type="text" name="name" placeholder="Name" />
+    <br>
     <label for="age">Age:</label>
     <input type="number" name="age" placeholder="Age" />
+    <br>
     <input type="submit" value="Add student" />
 </form>
 <a href="/">Home</a>

@@ -7,7 +7,6 @@
 </head>
 <body>
 <h1><%= "Welcome!" %></h1>
-<%--<a href="admission?q=Yves Isite">Admission page</a>--%>
 <a href="/?test=Yves0">Main page</a>
 <br>
 <a href="new?test=Yves1">Add student</a>

@@ -9,14 +9,22 @@
 <html>
 <head>
     <title>List of students</title>
+    <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
+<% String names[] =(String[]) request.getAttribute("studentsArr"); %>
+<ul>
+    <% for(String name: names) { %>
+    <li><%= name %></li>
+    <% } %>
+</ul>
 <h3 style="color: orangered">${ listTitle }</h3>
 <table border="1">
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Age</th>
+        <th>Action</th>
         <th></th>
     </tr>
     <tr>

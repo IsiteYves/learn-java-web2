@@ -8,3 +8,11 @@
 body {
     background-color: #134963;
 }
+
+th, td {
+    padding: 0.6rem 1.5rem;
+}
+
+table, th, td {
+    border: 1px solid #fff;
+}

@@ -8,5 +8,7 @@
 <h1><%= "message" %></h1>
 <h2>This is the main page!!</h2>
 <a href="hello">First subroute</a>
+<br>
+<a href="admission?q=Yves Isite">Admission page</a>
 </body>
 </html>

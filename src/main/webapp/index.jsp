@@ -3,12 +3,15 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
-<h1><%= "message" %></h1>
-<h2>This is the main page!!</h2>
-<a href="hello">First subroute</a>
+<h1><%= "Welcome!" %></h1>
+<%--<a href="admission?q=Yves Isite">Admission page</a>--%>
+<a href="/?test=Yves0">Main page</a>
 <br>
-<a href="admission?q=Yves Isite">Admission page</a>
+<a href="new?test=Yves1">Add student</a>
+<br>
+<a href="list?test=Yves3">List of students</a>
 </body>
 </html>

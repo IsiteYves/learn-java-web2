@@ -15,7 +15,7 @@ public class AdmissionServlet extends HttpServlet {
         out.println("<html><body>");
         out.println("<h2>Admission page</h2>");
         out.println("<p><b>q param value:</b>" + request.getParameter("q") + "</p>");
-        out.println("<a href=\"/demo_war_exploded\">Root page</a><br>");
+        out.println("<a href=\"/\">Root page</a><br>");
         out.println("<a href=\"hello\">First subroute</a>");
         out.println("</body></html>");
     }

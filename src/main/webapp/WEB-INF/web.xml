@@ -3,16 +3,40 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <context-param>
+        <param-name>jdbcURL</param-name>
+        <param-value>jdbc:postgresql://localhost:5432/servlet_crud?characterEncoding=utf8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcUsername</param-name>
+        <param-value>postgres</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value>81esyvprog17</param-value>
+    </context-param>
+<!--    <servlet>-->
+<!--        <servlet-name>welcomepage</servlet-name>-->
+<!--        <servlet-class>com.example.demo.HelloServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>welcomepage</servlet-name>-->
+<!--        <url-pattern>/test</url-pattern>-->
+<!--    </servlet-mapping>-->
     <servlet>
-        <servlet-name>welcome</servlet-name>
-        <servlet-class>com.example.demo.HelloServlet</servlet-class>
+        <servlet-name>Student</servlet-name>
+        <servlet-class>com.example.demo.controllers.Students</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>welcome</servlet-name>
+        <servlet-name>Student</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/css/*</url-pattern>
     </servlet-mapping>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
 </web-app>

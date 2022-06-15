@@ -3,14 +3,13 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
-    <link rel="stylesheet" href="./css/styles.css" />
 </head>
 <body>
 <h1><%= "Welcome!" %></h1>
-<a href="/?test=Yves0">Main page</a>
+<a href="/test/?test=Yves0">Main page</a>
 <br>
-<a href="new?test=Yves1">Add student</a>
+<a href="/new">Add student</a>
 <br>
-<a href="list?test=Yves3">List of students</a>
+<a href="/test/list?test=Yves3">List of students</a>
 </body>
 </html>

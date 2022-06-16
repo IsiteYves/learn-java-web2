@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
     <head>
-        <title>Students Managment</title>
+        <title>Students Management</title>
         <link href="${pageContext.request.contextPath}/css/styles.css" rel="stylesheet" type="text/css"> </link>
         <script language="JavaScript" type="text/JavaScript"
                 src="../js/hello.js"></script>
@@ -11,9 +12,9 @@
         <center>
             <h1>Students Management</h1>
             <h2>
-                <a href="/students_record/new">Add New Student</a>
+                <a href="/new">Add New Student</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="/students_record/list">List All Students</a>
+                <a href="/list">List All Students</a>
             </h2>
         </center>
         <div align="center">

@@ -9,6 +9,6 @@
     <body>
         <h2>Not found</h2>
         <h2><%= exception.getMessage() %><br/> </h2>
-        <a href="/student">Index page</a>
+        <a href="/">Index page</a>
     </body>
 </html>

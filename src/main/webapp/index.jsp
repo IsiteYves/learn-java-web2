@@ -8,7 +8,7 @@
 <h1><%= "Welcome!" %></h1>
 <a href="/test/?test=Yves0">Main page</a>
 <br>
-<a href="/new">Add student</a>
+<a href="/list">List students</a>
 <br>
 <a href="/test/list?test=Yves3">List of students</a>
 </body>

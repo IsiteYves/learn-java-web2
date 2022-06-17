@@ -23,7 +23,7 @@ public class StudentDao {
     protected void connect() throws SQLException {
         if (jdbcConnection == null || jdbcConnection.isClosed()) {
             try {
-                Class.forName("com.post");
+                Class.forName("org.postgresql.Driver");
             } catch (ClassNotFoundException e) {
                 throw new SQLException(e);
             }
@@ -36,19 +36,6 @@ public class StudentDao {
         }
     }
     public boolean insertStudent(Student student) throws SQLException {
-        String sql = "INSERT INTO student (first_name, last_name, gender) VALUES (?, ?, ?)";
-        connect();
-        PreparedStatement statement = jdbcConnection.prepareStatement(sql);
-        statement.setString(1, student.getFirstName());
-        statement.setString(2, student.getLastName());
-        statement.setString(3, student.getGender());
-        boolean rowInserted = statement.executeUpdate() > 0;
-        statement.close();
-        disconnect();
-        return rowInserted;
-    }
-
-    public boolean insertStudentHbnt(Student student) throws SQLException {
         String sql = "INSERT INTO student (first_name, last_name, gender) VALUES (?, ?, ?)";
         connect();
         PreparedStatement statement = jdbcConnection.prepareStatement(sql);

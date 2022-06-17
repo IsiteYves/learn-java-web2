@@ -43,6 +43,7 @@
                             <td>
                                 <input type="text" name="firstName" size="45"
                                        value="<c:out value='${student.firstName}' />"
+                                       required
                                 />
                             </td>
                         </tr>
@@ -51,6 +52,7 @@
                             <td>
                                 <input type="text" name="lastName" size="45"
                                        value="<c:out value='${student.lastName}' />"
+                                       required
                                 />
                             </td>
                         </tr>
@@ -59,13 +61,14 @@
                             <td>
                                 <input type="text" name="gender" size="5"
                                        value="<c:out value='${student.gender}' />"
+                                       required
                                 />
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2" align="center">
                                 <input type="submit" value="Save" />
-                                <input type="buttonk" value="clear" />
+                                <input type="reset" value="clear" />
                             </td>
                         </tr>
                     </table>

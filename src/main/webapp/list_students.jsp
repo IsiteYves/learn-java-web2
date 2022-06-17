@@ -1,37 +1,42 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Isite
-  Date: 6/10/2022
-  Time: 9:56 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-<head>
-    <title>List of students</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-</head>
-<body>
-<h3 style="color: orangered">${ listTitle }</h3>
-
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Action</th>
-    </tr>
-    <% String students[][] =(String[][]) request.getAttribute("studentsArr"); %>
-    <% for(String[] student: students) { %>
-    <tr>
-        <td><%= student[0] %></td>
-        <td><%= student[1] %></td>
-        <td><%= student[2] %></td>
-        <td><a href="">Edit</a></td>
-    </tr>
-    <% } %>
-</table>
-<br>
-<a href="/">Home</a>
-</body>
+    <head>
+        <title>Students Management</title>
+        <link  rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    </head>
+    <body>
+        <center>
+            <h1>Students Management</h1>
+            <h2>
+                <a href="/new">Add New Student</a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="/list">List All Students</a>
+            </h2>
+        </center>
+        <div align="center">
+            <table border="1" cellpadding="5">
+                <caption><h2>List of Students</h2></caption>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+                <c:forEach var="student" items="${listStudent}">
+                    <tr>
+                        <td>${student.firstName}</td>
+                        <td><c:out value="${student.lastName}" /></td>
+                        <td><c:out value="${student.gender}" /></td>
+                        <td>
+                            <a href="/edit?id=<c:out value='${student.id}' />">Edit</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="/delete?id=<c:out value='${student.id}' />">Delete</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </div>
+    </body>
 </html>

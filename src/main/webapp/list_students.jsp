@@ -18,24 +18,42 @@
             }
 
             table th {
-                background: #808080;
+                background: #114c64;
                 border: none;
                 color: #fff;
             }
+            table tr:nth-child(even) {
+                background: #dcdcdc;
+            }
             table caption * {
-                color: #1e90ff;
+                color: #092a37;
+            }
+            .header-details {
+                text-align: center;
+            }
+            .header-details>h2 {
+                margin: 1rem auto;
+            }
+            .header-details>h2>a {
+                font-weight: 400;
+                font-size: 16px;
+                color: #fff;
+                text-decoration: none;
+                padding: 0.6rem 2rem;
+                border-radius: 4px;
+                background: #105ba6;
             }
         </style>
     </head>
     <body>
-        <center>
+        <div class="header-details">
             <h1>Students Management</h1>
             <h2>
                 <a href="/new">Add New Student</a>
                 &nbsp;&nbsp;&nbsp;
                 <a href="/list">List All Students</a>
             </h2>
-        </center>
+        </div>
         <div align="center">
             <table border="1" cellpadding="5">
                 <caption><h2>List of Students</h2></caption>

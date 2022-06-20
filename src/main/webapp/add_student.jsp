@@ -4,6 +4,9 @@
 <html>
     <head>
         <title>Students Management</title>
+        <style>
+
+        </style>
         <link href="./css/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>

@@ -5,6 +5,27 @@
     <head>
         <title>Students Management</title>
         <link  rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            body {
+                background: #f5f5f5;
+                padding-top: 3rem;
+            }
+            table {
+                margin-top: 1rem;
+            }
+            table tr:first-of-type {
+                border: none;
+            }
+
+            table th {
+                background: #808080;
+                border: none;
+                color: #fff;
+            }
+            table caption * {
+                color: #1e90ff;
+            }
+        </style>
     </head>
     <body>
         <center>

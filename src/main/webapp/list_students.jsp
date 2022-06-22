@@ -4,8 +4,26 @@
 <html>
     <head>
         <title>Students Management</title>
-        <link  rel="stylesheet" type="text/css" href="./css/styles.css"/>
+<%--        <link  rel="stylesheet" type="text/css" href="./css/styles.css"/>--%>
         <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial;
+            }
+
+            body {
+                background-color: #f5f5f5;
+            }
+
+            th, td {
+                padding: 0.6rem 1.5rem;
+            }
+
+            table, th, td {
+                border-collapse: collapse;
+            }
             body {
                 background: #f5f5f5;
                 padding-top: 3rem;

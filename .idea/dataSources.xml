@@ -8,5 +8,16 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/servlet_crud</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="org.hibernate.tutorial.java/Hibernate" uuid="a9f91b6e-e3f6-4bb9-82b6-d01476a8e189">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Benitha/IdeaProjects/demo/src/main/resources/META-INF/persistence.xml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/servlet_crud</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

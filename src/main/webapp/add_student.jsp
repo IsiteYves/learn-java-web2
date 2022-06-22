@@ -54,8 +54,26 @@
                 border-radius: 4px;
                 background: #105ba6;
             }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial;
+            }
+
+            body {
+                background-color: #f5f5f5;
+            }
+
+            th, td {
+                padding: 0.6rem 1.5rem;
+            }
+
+            table, th, td {
+                border-collapse: collapse;
+            }
         </style>
-        <link href="./css/styles.css" rel="stylesheet" type="text/css"/>
+<%--        <link href="./css/styles.css" rel="stylesheet" type="text/css"/>--%>
     </head>
     <body>
         <div class="header-details">

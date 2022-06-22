@@ -1,7 +1,6 @@
 package com.example.demo.controllers;
 
 import com.example.demo.dao.StudentDao;
-import com.example.demo.dao.StudentDaoHbnt;
 import com.example.demo.models.Student;
 
 import javax.servlet.RequestDispatcher;
@@ -14,16 +13,19 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Servlet implementation class Students
+ * Servlet implementation class Students_old
  */
 //@WebServlet("/")
-public class Students extends HttpServlet {
+public class Students_old extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-    private StudentDaoHbnt studentDao;
+    private StudentDao studentDao;
 
     public void init() {
-        studentDao = new StudentDaoHbnt();
+        String jdbcURL = getServletContext().getInitParameter("jdbcURL");
+        String jdbcUsername = getServletContext().getInitParameter("jdbcUsername");
+        String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
+        studentDao = new StudentDao(jdbcURL, jdbcUsername, jdbcPassword);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

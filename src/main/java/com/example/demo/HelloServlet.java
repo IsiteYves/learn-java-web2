@@ -28,7 +28,7 @@ public class HelloServlet extends HttpServlet {
                 dispatcher.forward(request, response);
                 break;
             case "/list":
-                String listTitle= "List of registered Students";
+                String listTitle= "List of registered Students_old";
                 request.setAttribute("listTitle", listTitle);
                 String[][] students = {{"1,","John","20"}, {"2", "Mary", "29"}, {"3", "Peter", "17"}};
                 request.setAttribute("studentsArr", students);

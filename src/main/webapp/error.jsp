@@ -8,7 +8,7 @@
     </head>
     <body>
         <h2>Not found</h2>
-        <h2><%= exception.getMessage() %><br/> </h2>
+        <h2><%= exception.printStackTrace() %><br/> </h2>
         <a href="/">Index page</a>
     </body>
 </html>

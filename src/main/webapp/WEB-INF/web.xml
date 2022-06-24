@@ -19,18 +19,18 @@
 <!--        <servlet-name>welcomepage</servlet-name>-->
 <!--        <servlet-class>com.example.demo.HelloServlet</servlet-class>-->
 <!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>welcomepage</servlet-name>-->
-<!--        <url-pattern>/test</url-pattern>-->
-<!--    </servlet-mapping>-->
-    <servlet>
-        <servlet-name>Student</servlet-name>
-        <servlet-class>com.example.demo.controllers.Students_old</servlet-class>
-    </servlet>
     <servlet-mapping>
-        <servlet-name>Student</servlet-name>
-        <url-pattern>/</url-pattern>
+        <servlet-name>Students</servlet-name>
+        <url-pattern>/test</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Students</servlet-name>
+        <servlet-class>com.example.demo.controllers.Students</servlet-class>
+    </servlet>
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Student</servlet-name>-->
+<!--        <url-pattern>/</url-pattern>-->
+<!--    </servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/css/*</url-pattern>

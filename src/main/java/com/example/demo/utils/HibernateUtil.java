@@ -1,6 +1,8 @@
 package com.example.demo.utils;
 import java.util.Properties;
 
+import com.example.demo.models.Course;
+import com.example.demo.models.CourseAssignment;
 import com.example.demo.models.Student;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -20,7 +22,7 @@ public class HibernateUtil {
                 Configuration configuration = new Configuration();
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "org.postgresql.Driver");
-                settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/servlet_crud?characterEncoding=utf8&&serverTimezone=UTC");
+                settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/servlet_crud?characterEncoding=utf8");
                 settings.put(Environment.USER, "postgres");
                 settings.put(Environment.PASS, "81esyvprog17");
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
@@ -31,8 +33,8 @@ public class HibernateUtil {
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(Student.class);
 //                configuration.addAnnotatedClass(Bed.class);
-//                configuration.addAnnotatedClass(Course.class);
-//                configuration.addAnnotatedClass(CourseAssignment.class);
+                configuration.addAnnotatedClass(Course.class);
+                configuration.addAnnotatedClass(CourseAssignment.class);
 //                configuration.addAnnotatedClass(BedAssignment.class);
 //                configuration.addAnnotatedClass(AuditTrail.class);
 

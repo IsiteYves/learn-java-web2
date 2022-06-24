@@ -1,11 +1,11 @@
 package com.example.demo.controllers;
 
-import com.example.demo.dao.StudentDao;
 import com.example.demo.dao.StudentDaoHbnt;
 import com.example.demo.models.Student;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,9 +16,8 @@ import java.util.List;
 /**
  * Servlet implementation class Students
  */
-//@WebServlet("/")
+@WebServlet(name="Student" ,value="/")
 public class Students extends HttpServlet {
-
     private static final long serialVersionUID = 1L;
     private StudentDaoHbnt studentDao;
 

@@ -2,11 +2,11 @@ package com.example.demo.models;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity()
+@Table(name = "student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
     private Long id;
 
     @Column(name = "first_name", nullable = false, length = 150)
